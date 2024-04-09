@@ -1,36 +1,27 @@
 # CrochetCalculator
 
-## Description
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
-CrochetCalculator is a web-based tool designed to help crocheters determine project dimensions accurately. This tool provides the functionality to calculate dimensions based on various parameters such as stitch gauge, yarn weight, and hook size.
+## Development server
 
-## Features
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- Calculate dimensions for crochet projects based on stitch gauge, yarn weight, and hook size.
-- User-friendly interface for easy input and interpretation of results.
-- Support for various crochet stitch patterns and techniques.
-- Customizable options to accommodate different preferences and styles.
-- Mobile-responsive design for accessibility on different devices.
-- Visual representation based on user input
+## Code scaffolding
 
-## Usage
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-1. Visit CrochetCalculator website.
-2. Enter the required parameters such as stitch gauge, yarn weight, and hook size.
-3. Adjust any additional options as needed.
-4. Click "Calculate" to generate project dimensions.
-5. Review the calculated dimensions and adjust your crochet project accordingly.
+## Build
 
-## Installation
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-CrochetCalculator is a web-based tool, so no installation is required. Simply visit the website at **application still in development stage.
+## Running unit tests
 
-## Contributing
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-If you'd like to contribute to CrochetCalculator, feel free to fork the repository and submit a pull request with your proposed changes. Contributions such as bug fixes, feature enhancements, and documentation improvements are welcome.
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Acknowledgements
+## Further help
 
-- Katelin Vincent - Creator of CrochetCalculator
-- EasyCrochet.com - Inspiration for the project idea
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
