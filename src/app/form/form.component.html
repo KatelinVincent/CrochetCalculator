@@ -1,0 +1,59 @@
+<div class="grid grid-cols-2 gap-10">
+    <div>
+        <form class="font-mono form-control" [formGroup]="project" (ngSubmit)="onSubmit()">
+            <label class="w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">What stitch will you be using?</span>
+                </div>
+                <input formControlName="stitch" type="text" placeholder="Half Double"
+                    class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">What is your yarn size?</span>
+                </div>
+                <input formControlName="yarnSize" type="text" placeholder="Bulky"
+                    class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">What size hook will you be using?</span>
+                </div>
+                <input formControlName="hookSize" type="text" placeholder="6.5"
+                    class="input input-bordered w-full max-w-xs" />
+            </label>
+            <label class="w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">Project Size? (Rows x Colmns)</span>
+                </div>
+                <div class="grid grid-cols-3">
+                    <input formControlName="rows" type="text" placeholder="6" class="input input-bordered " />
+                    <p class="justify-self-center text-2xl mt-5">X</p>
+                    <input formControlName="columns" type="text" placeholder="5" class="input input-bordered " />
+                </div>
+            </label>
+            <div class="grid grid-cols-2 gap-5 w-full max-w-xs my-5">
+                <button class="btn" (click)="project.reset()">Reset</button>
+                <button class="btn btn-accent" type="submit">Build my Project!</button>
+            </div>
+        </form>
+        <a href="https://www.flaticon.com/free-icons/pattern" title="pattern icons">Pattern icons created by Rahul
+            Kaklotar - Flaticon</a>
+    </div>
+    <div *ngIf="rowIterator.length !== 0 && columnIterator.length !== 0">
+        <div class="row-container">
+            <div *ngFor="let _ of columnIterator" class="column">
+                <div *ngFor="let _ of rowIterator" class="row">
+                <img src="assets\pattern.png" width="40" height="40">
+              </div>
+            </div>
+          </div>
+        <p class="text-lg"><strong>Pattern:</strong></p>
+        <ul class="list-disc mx-5">
+            <li>{{project.controls.stitch.value}} Stitch</li>
+            <li>{{project.controls.yarnSize.value}} Yarn</li>
+            <li>{{project.controls.hookSize.value}} Hook</li>
+            <li>{{project.controls.rows.value}}x{{project.controls.columns.value}} Size</li>
+        </ul>
+        <p>Estimated Size: {{project.controls.rows.value!*4}}in X {{project.controls.columns.value!*4}}in</p>
+    </div>
